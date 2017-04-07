@@ -30,9 +30,9 @@ public class MergeSort {
 	
 	private static void combine(int[] arrays,int left,int middle,int end) {
 		int[] results = new int[arrays.length];
-		int leftNum = 0;
+		int leftNum = left;
 		int rightNum =middle + 1;
-		int totalNum = 0;
+		int totalNum = left;
 		while (leftNum <= middle && rightNum <= end){
 			results[totalNum++] = arrays[leftNum] < arrays[rightNum] ? arrays[leftNum++] : arrays[rightNum++];
 		}
@@ -42,7 +42,7 @@ public class MergeSort {
 		while(rightNum <= end){
 			results[totalNum++] = arrays[rightNum++];
 		}
-		for(int i=0;i<totalNum;i++){
+		for(int i=left;i<totalNum;i++){
 			arrays[i] = results[i];
 		}
 		StringBuilder sb = new StringBuilder();
