@@ -7,4 +7,10 @@ public class SortTools {
 		}
 		System.out.println(sb.toString());
 	}
+	
+	public static void swap(int[] arrays,int x,int y){
+		int temp = arrays[x];
+		arrays[x] = arrays[y];
+		arrays[y] = temp;
+	}
 }
